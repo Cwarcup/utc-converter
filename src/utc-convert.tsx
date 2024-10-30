@@ -51,7 +51,7 @@ export default function Command() {
         const grepStartTime = format(startTime, "dd/MMM/yyyy:HH:mm:ss");
         const grepEndTime = format(endTime, "dd/MMM/yyyy:HH:mm:ss");
 
-        grepCommand = `awk -v start="${grepStartTime}" -v end="${grepEndTime}" '$4 >= "["start && $4 <= "["end' "${logPath}" | grep "${grepDate}"`;
+        grepCommand = `awk -v start="${grepStartTime}" -v end="${grepEndTime}" '$4 >= "["start && $4 <= "["end' "${logPath}"`;
       }
 
       const formattedResult = {
